@@ -8,9 +8,15 @@
         //     .catch(error => console.error(`Error loading ${url}:`, error));
         // }
 
-        const BASE_PATH = window.location.origin + "/customer_html/";
+        // const BASE_PATH = window.location.origin + "/customer_html/";
+        // Auto-detect if running on GitHub or locally
+        const isGitHubPages = window.location.hostname.includes("github.io");
+        const projectPath = isGitHubPages ? "/project/" : "/"; // Adjust based on where your files are
+        const BASE_PATH = window.location.origin + projectPath;
+
         function loadContent(url, elementId, callback) {
-            let newUrl=BASE_PATH+url;
+            let newUrl=BASE_PATH+ url;
+            console.log("Loading:", newUrl); // Debugging
             fetch(newUrl)
                 .then(response => response.text())
                 // .then(data => {document.getElementById(elementId).innerHTML = data;})
@@ -27,7 +33,7 @@
             }
     
         // Load Header
-        loadContent('header.html', 'head',attachNavEventListeners);
+        loadContent('customer_html/header.html', 'head',attachNavEventListeners);
 
         // Load who we are
         loadContent('whoWeAre.html', 'who');
@@ -37,7 +43,10 @@
 
 
         function attachNavEventListeners() {
-            let baseUrl = window.location.origin + '/';
+            // let baseUrl = window.location.origin + '/';
+            let isGitHub = window.location.hostname.includes("github.io");
+            let baseUrl = isGitHub ? window.location.origin + "/project/" : window.location.origin + "/";
+
             let pages = ['index.html', 'customer_html/category.html', 'customer_html/contactUs.html', 'customer_html/feedback.html'];
         
             let links = document.querySelectorAll('.naviLink');
