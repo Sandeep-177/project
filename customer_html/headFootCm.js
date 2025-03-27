@@ -11,7 +11,7 @@
         // const BASE_PATH = window.location.origin + "/customer_html/";
         // Auto-detect if running on GitHub or locally
         const isGitHubPages = window.location.hostname.includes("github.io");
-        const projectPath = isGitHubPages ? "/project/" : "/"; // Adjust based on where your files are
+        const projectPath = isGitHubPages ? "/project/customer_html/" : "/customer_html/"; // Adjust based on where your files are
         const BASE_PATH = window.location.origin + projectPath;
 
         function loadContent(url, elementId, callback) {
@@ -33,7 +33,7 @@
             }
     
         // Load Header
-        loadContent('customer_html/header.html', 'head',attachNavEventListeners);
+        loadContent('header.html', 'head',attachNavEventListeners);
 
         // Load who we are
         loadContent('whoWeAre.html', 'who');
