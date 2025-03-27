@@ -37,7 +37,7 @@
 
 
         function attachNavEventListeners() {
-            let baseUrl = window.location.origin + '/project/';
+            let baseUrl = window.location.origin + '/';
             let pages = ['index.html', 'customer_html/category.html', 'customer_html/contactUs.html', 'customer_html/feedback.html'];
         
             let links = document.querySelectorAll('.naviLink');
