@@ -10,9 +10,21 @@ document.querySelector('#paint').addEventListener("click",function() {
 document.querySelector('#clean').addEventListener("click",function() {
     window.location.href='./subCategory/cleaning.html';
 });
-document.querySelector('#pest').addEventListener("click",function() {
-    window.location.href='./subCategory/pestControl.html';
+// document.querySelector('#pest').addEventListener("click",function() {
+//     window.location.href='./subCategory/pestControl.html';
+// });
+document.addEventListener("DOMContentLoaded", function () {
+    let pestElement = document.querySelector("#pest");
+
+    if (!pestElement) {
+        console.error("❌ Element with ID '#pest' not found in the DOM!");
+    } else {
+        pestElement.addEventListener("click", function () {
+            window.location.href = './subCategory/pestControl.html';
+        });
+    }
 });
+
 document.querySelector('#kitchen').addEventListener("click",function() {
     window.location.href='./subCategory/kitchen.html';
 });
