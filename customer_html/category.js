@@ -1,48 +1,24 @@
-document.querySelector('#plumb').addEventListener("click",function() {
-    window.location.href='./subCategory/plumbing.html';
-});
-document.querySelector('#electric').addEventListener("click",function() {
-    window.location.href='./subCategory/electrical.html';
-});
-document.querySelector('#paint').addEventListener("click",function() {
-    window.location.href='./subCategory/paint.html';
-});
-document.querySelector('#clean').addEventListener("click",function() {
-    window.location.href='./subCategory/cleaning.html';
-});
-// document.querySelector('#pest').addEventListener("click",function() {
-//     window.location.href='./subCategory/pestControl.html';
-// });
-document.addEventListener("DOMContentLoaded", function () {
-    let pestElement = document.querySelector("#pest");
+let categoryPages=['plumbing.html','electrical.html','paint.html','cleaning.html','pestControl.html','kitchen.html','lundry.html','conditioner.html','photography.html','eventManage.html','compMob.html','shifting.html']
+let ckd=document.querySelectorAll('.tryi');
+if (ckd.length === 0) {
+    console.error("Navigation links not found! Ensure header is loaded.");
+}
 
-    if (!pestElement) {
-        console.error("❌ Element with ID '#pest' not found in the DOM!");
-    } else {
-        pestElement.addEventListener("click", function () {
-            window.location.href = './subCategory/pestControl.html';
-        });
-    }
-});
+console.log("✅ Navigation links detected:", ckd.length);
 
-document.querySelector('#kitchen').addEventListener("click",function() {
-    window.location.href='./subCategory/kitchen.html';
-});
-document.querySelector('#lundry').addEventListener("click",function() {
-    window.location.href='./subCategory/lundry.html';
-});
-document.querySelector('#ac').addEventListener("click",function() {
-    window.location.href='./subCategory/conditioner.html';
-});
-document.querySelector('#photVideo').addEventListener("click",function() {
-    window.location.href='./subCategory/photography.html';
-});
-document.querySelector('#event').addEventListener("click",function() {
-    window.location.href='./subCategory/eventManage.html';
-});
-document.querySelector('#compMob').addEventListener("click",function() {
-    window.location.href='./subCategory/compMob.html';
-});
-document.querySelector('#moveShift').addEventListener("click",function() {
-    window.location.href='./subCategory/shifting.html';
+ckd.forEach(link => {
+    link.addEventListener('click', function (event) {
+        console.log('clicked');
+        event.preventDefault();
+        let elemntIndex = parseInt(this.getAttribute('data-new'), 10);
+
+        if (elemntIndex >= 0 && elemntIndex < categoryPages.length) {
+            let baseUrls=window.location.origin + '/subCategory/';
+            let targetUrl = baseUrls + categoryPages[elemntIndex];
+            console.log("Navigating to:", targetUrl);
+            window.location.href = targetUrl;
+        } else {
+            console.error("Invalid path index:", elemntIndex);
+        }
+    });
 });
