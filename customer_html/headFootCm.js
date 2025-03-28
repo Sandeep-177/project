@@ -56,7 +56,7 @@
                 return;
             }
         
-            console.log("✅ Navigation links detected:", links.length);
+            console.log("✅ line 59, Navigation links detected:", links.length);
         
             links.forEach(link => {
                 link.addEventListener('click', function (event) {
