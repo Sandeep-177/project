@@ -81,9 +81,11 @@
                 let svgTest= window.location.hostname.includes("github.io");
                 if (svgTest) {
                     img.getAttribute("src") = "/project" + img.getAttribute("src");
+                }else{
+                    console.log("svgLnk not found, line 85")
                 }
             });
-            console.log("svgs loaded, line 108")
+            console.log("svgs loaded, line 88")
         });
         
 
