@@ -73,6 +73,18 @@
                 });
             });
         }
+        
+        document.addEventListener("DOMContentLoaded", function () {
+            const images = document.querySelectorAll("img");
+            images.forEach(img => {
+                let svgTest= window.location.hostname.includes("github.io");
+                if (svgTest) {
+                    img.getAttribute("src") = "/project" + img.getAttribute("src");
+                }
+            });
+            console.log("svgs loaded, line 108")
+        });
+        
 
 
        
