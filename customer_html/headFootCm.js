@@ -75,8 +75,10 @@
         }
 
         document.addEventListener("DOMContentLoaded", function () {
+            setTimeout(() => {
             const images = document.querySelectorAll(".svgLnk");
             console.log(`svgLnk elements found: ${images.length}`);
+        }, 1000);
             images.forEach(img => {
                 console.log("processing:",img);
                 let svgTest= window.location.hostname.includes("github.io");
