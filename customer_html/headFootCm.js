@@ -73,9 +73,10 @@
                 });
             });
         }
-        
+
         document.addEventListener("DOMContentLoaded", function () {
-            const images = document.querySelectorAll("img");
+            const images = document.querySelectorAll(".svgLnk");
+            console.log("svgLnk found");
             images.forEach(img => {
                 let svgTest= window.location.hostname.includes("github.io");
                 if (svgTest) {
