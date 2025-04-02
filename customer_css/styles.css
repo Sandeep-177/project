@@ -117,6 +117,7 @@ header nav ul li a {
 #services .service-cards {
     display: flex;
     gap: 2rem;
+    /* flex-wrap:wrap; */
 }
 
 .card {

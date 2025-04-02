@@ -10,8 +10,9 @@
 
         // const BASE_PATH = window.location.origin + "/customer_html/";
         // Auto-detect if running on GitHub or locally
-        const isGitHubPages = window.location.hostname.includes("github.io");
-        const projectPath = isGitHubPages ? "/project/customer_html/" : "/customer_html/"; // Adjust based on where your files are
+        // const isGitHubPages = window.location.hostname.includes("github.io");
+        const isGitHub = window.location.hostname.includes("github.io");
+        const projectPath = isGitHub ? "/project/customer_html/" : "/customer_html/"; // Adjust based on where your files are
         const BASE_PATH = window.location.origin + projectPath;
 
         function loadContent(url, elementId, callback) {
@@ -37,15 +38,23 @@
 
         // Load who we are
         loadContent('whoWeAre.html', 'who');
+        // let isGitHub = window.location.hostname.includes("github.io");
+        let baseUrl = isGitHub ? window.location.origin + "/project/" : window.location.origin + "/";
 
         // Load Footer
         loadContent('footer.html', 'foot');
-
+        let que=document.querySelectorAll('.lernm')[0];
+        addEventListener('DOMContentLoaded',function about() {
+            // a.getAttribute('href');
+            if(isGitHub){
+            que.setAttribute("src", "/project" + que.getAttribute("src"));
+        }else{
+            console.log('url of aboutUs is',window.location.href)
+        }
+        })
 
         function attachNavEventListeners() {
             // let baseUrl = window.location.origin + '/';
-            let isGitHub = window.location.hostname.includes("github.io");
-            let baseUrl = isGitHub ? window.location.origin + "/project/" : window.location.origin + "/";
 
             let pages = ['index.html', 'customer_html/category.html', 'customer_html/contactUs.html', 'customer_html/feedback.html'];
         
