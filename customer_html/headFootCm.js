@@ -13,7 +13,7 @@
         // const isGitHubPages = window.location.hostname.includes("github.io");
         console.log("entered the headfootcm.js")
         const isGitHub = window.location.hostname.includes("github.io");
-        const projectPath = isGitHub ? "/project/" : "/"; // Adjust based on where your files are
+        const projectPath = isGitHub ? "/project" : "/"; // Adjust based on where your files are
         const BASE_PATH = window.location.origin + projectPath;
 
         function loadContent(url, elementId, callback) {
@@ -35,11 +35,11 @@
             }
     
         // Load Header
-        loadContent('customer_html/header.html', 'head',attachNavEventListeners);
+        loadContent('/customer_html/header.html', 'head',attachNavEventListeners);
         // loadContent('header.html', 'head',attachNavEventListeners);
 
         // Load who we are
-        loadContent('customer_html/whoWeAre.html', 'who');
+        loadContent('/customer_html/whoWeAre.html', 'who');
         // let isGitHub = window.location.hostname.includes("github.io");
         // let baseUrl = isGitHub ? window.location.origin + "/project/" : window.location.origin + "/";
 
