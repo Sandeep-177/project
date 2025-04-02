@@ -13,7 +13,7 @@
         // const isGitHubPages = window.location.hostname.includes("github.io");
         console.log("entered the headfootcm.js")
         const isGitHub = window.location.hostname.includes("github.io");
-        const projectPath = isGitHub ? "/project" : "/"; // Adjust based on where your files are
+        const projectPath = isGitHub ? "/project/" : "/"; // Adjust based on where your files are
         const BASE_PATH = window.location.origin + projectPath;
 
         function loadContent(url, elementId, callback) {
