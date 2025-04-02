@@ -11,6 +11,7 @@
         // const BASE_PATH = window.location.origin + "/customer_html/";
         // Auto-detect if running on GitHub or locally
         // const isGitHubPages = window.location.hostname.includes("github.io");
+        console.log("entered the headfootcm.js")
         const isGitHub = window.location.hostname.includes("github.io");
         const projectPath = isGitHub ? "/project/customer_html/" : "/customer_html/"; // Adjust based on where your files are
         const BASE_PATH = window.location.origin + projectPath;
@@ -34,7 +35,8 @@
             }
     
         // Load Header
-        loadContent('header.html', 'head',attachNavEventListeners);
+        loadContent('header.html', 'head');
+        // loadContent('header.html', 'head',attachNavEventListeners);
 
         // Load who we are
         loadContent('whoWeAre.html', 'who');
@@ -43,45 +45,69 @@
 
         // Load Footer
         loadContent('footer.html', 'foot');
-        let que=document.querySelectorAll('.lernm')[0];
-        addEventListener('DOMContentLoaded',function about() {
-            // a.getAttribute('href');
-            if(isGitHub){
-            que.setAttribute("src", "/project" + que.getAttribute("src"));
-        }else{
-            console.log('url of aboutUs is',window.location.href)
-        }
-        })
-
-        function attachNavEventListeners() {
-            // let baseUrl = window.location.origin + '/';
-
-            let pages = ['index.html', 'customer_html/category.html', 'customer_html/contactUs.html', 'customer_html/feedback.html'];
-        
-            let links = document.querySelectorAll('.naviLink');
+        // // let que=document.querySelectorAll('.lernm')[0];
+        // addEventListener('DOMContentLoaded',function() {
+        //     // a.getAttribute('href');
+        //     if(isGitHub){
+        //         let baseUrl = window.location.origin + '/';
+        //         let mnd=document.querySelectorAll('a');
+        //         mnd.forEach(met=>{
+        //             met.setAttribute("src", "/project" + met.getAttribute("src"));
+        //         })
+        //     // que.setAttribute("src", "/project" + que.getAttribute("src"));
+        // }else{
+        //     console.log('url of this page is',window.location.href);
+        //     met.setAttribute("src", baseUrl + met.getAttribute("src"));
+        // }
+        // })
+        addEventListener('DOMContentLoaded',function() {
+            setTimeout(() => {
+                
             
-            if (links.length === 0) {
-                console.error("Navigation links not found! Ensure header is loaded.");
-                return;
-            }
-        
-            console.log("✅ line 59, Navigation links detected:", links.length);
-        
-            links.forEach(link => {
-                link.addEventListener('click', function (event) {
-                    event.preventDefault();
-                    let pageIndex = parseInt(this.getAttribute('data-target'), 10);
-        
-                    if (pageIndex >= 0 && pageIndex < pages.length) {
-                        let targetUrl = baseUrl + pages[pageIndex];
-                        console.log("Navigating to:", targetUrl);
-                        window.location.href = targetUrl;
-                    } else {
-                        console.error("Invalid path index:", pageIndex);
-                    }
-                });
+            let baseUrl = window.location.origin + '/';
+            let mnd=document.querySelectorAll('a');
+            mnd.forEach(met=>{
+                if (isGitHub) {
+                    met.setAttribute("src", "/project" + met.getAttribute("src"));
+                }else{
+                    console.log('url of this page is',window.location.href);
+                    met.setAttribute("src", baseUrl + met.getAttribute("src"));
+                };
             });
-        }
+        }, 2000);
+        });
+
+
+        // function attachNavEventListeners() {
+        //     // let baseUrl = window.location.origin + '/';
+
+        //     let pages = ['index.html', 'customer_html/category.html', 'customer_html/contactUs.html', 'customer_html/feedback.html'];
+        
+        //     let links = document.querySelectorAll('.naviLink');
+            
+        //     if (links.length === 0) {
+        //         console.error("Navigation links not found! Ensure header is loaded.");
+        //         return;
+        //     }
+        
+        //     console.log("✅ line 59, Navigation links detected:", links.length);
+        
+        //     links.forEach(link => {
+        //         link.addEventListener('click', function (event) {
+        //             event.preventDefault();
+        //             let pageIndex = parseInt(this.getAttribute('data-target'), 10);
+        
+        //             if (pageIndex >= 0 && pageIndex < pages.length) {
+        //                 let targetUrl = baseUrl + pages[pageIndex];
+        //                 console.log("Navigating to:", targetUrl);
+        //                 window.location.href = targetUrl;
+        //             } else {
+        //                 console.error("Invalid path index:", pageIndex);
+        //             }
+        //         });
+        //     });
+        // }
+        console.log('exited the headFootCm.js file');
 
         
         
