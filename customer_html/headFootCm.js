@@ -60,28 +60,43 @@
         //     met.setAttribute("src", baseUrl + met.getAttribute("src"));
         // }
         // })
-        addEventListener('DOMContentLoaded',function() {
-            setTimeout(() => {
-                
+       
+
+
+        function attachNavEventListeners() {
+            // let baseUrl = window.location.origin + '/';
+
+            // let pages = ['index.html', 'customer_html/category.html', 'customer_html/contactUs.html', 'customer_html/feedback.html'];
+        
+            let links = document.querySelectorAll('a');
             
-            let baseUrl = window.location.origin + '/';
-            let mnd=document.querySelectorAll('a');
-            mnd.forEach(met=>{
-                met.addEventListener('click',(event)=>{
-                    // event.preventDefault();
-                    console.log('navbar link clicked');
-                    if (isGitHub) {
-                        met.setAttribute("href", "/project" + met.getAttribute("href"));
-                    }else{
-                        console.log('url of this page is',window.location.href);
-                        met.setAttribute("href", baseUrl + met.getAttribute("href"));
-                    };
-                })
+            if (links.length === 0) {
+                console.error("Navigation links not found! Ensure header is loaded.");
+                return;
+            }
+        
+            console.log("✅ line 59, Navigation links detected:", links.length);
+        
+            links.forEach(link => {
+                link.addEventListener('click', function (event) {
+                    event.preventDefault();
+                    // let pageIndex = parseInt(this.getAttribute('data-target'), 10);
+      
+                    // if (pageIndex >= 0 && pageIndex < pages.length) {
+                    //     let targetUrl = baseUrl + pages[pageIndex];
+                    //     console.log("Navigating to:", targetUrl);
+                    //     window.location.href = targetUrl;
+
+                    if (go) {
+                        let targetUrl = BASE_PATH + link.getAttribute("href");
+                        console.log("Navigating to:", targetUrl);
+                        window.location.href = targetUrl;
+                    } else {
+                        console.error("Invalid path index:", pageIndex);
+                    }
+                });
             });
-        }, 2000);
-        });
-
-
+        }
         // function attachNavEventListeners() {
         //     // let baseUrl = window.location.origin + '/';
 
