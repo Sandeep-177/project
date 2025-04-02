@@ -67,12 +67,16 @@
             let baseUrl = window.location.origin + '/';
             let mnd=document.querySelectorAll('a');
             mnd.forEach(met=>{
-                if (isGitHub) {
-                    met.setAttribute("src", "/project" + met.getAttribute("src"));
-                }else{
-                    console.log('url of this page is',window.location.href);
-                    met.setAttribute("src", baseUrl + met.getAttribute("src"));
-                };
+                met.addEventListener('click',(event)=>{
+                    // event.preventDefault();
+                    console.log('navbar link clicked');
+                    if (isGitHub) {
+                        met.setAttribute("href", "/project" + met.getAttribute("href"));
+                    }else{
+                        console.log('url of this page is',window.location.href);
+                        met.setAttribute("href", baseUrl + met.getAttribute("href"));
+                    };
+                })
             });
         }, 2000);
         });
