@@ -35,7 +35,7 @@
             }
     
         // Load Header
-        loadContent('header.html', 'head');
+        loadContent('header.html', 'head',attachNavEventListeners);
         // loadContent('header.html', 'head',attachNavEventListeners);
 
         // Load who we are
