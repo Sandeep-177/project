@@ -87,7 +87,7 @@
                     //     console.log("Navigating to:", targetUrl);
                     //     window.location.href = targetUrl;
 
-                    if (go) {
+                    if (links.length>0) {
                         let targetUrl = BASE_PATH + link.getAttribute("href");
                         console.log("Navigating to:", targetUrl);
                         window.location.href = targetUrl;
