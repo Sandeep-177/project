@@ -41,7 +41,7 @@
         // Load who we are
         loadContent('whoWeAre.html', 'who');
         // let isGitHub = window.location.hostname.includes("github.io");
-        let baseUrl = isGitHub ? window.location.origin + "/project/" : window.location.origin + "/";
+        // let baseUrl = isGitHub ? window.location.origin + "/project/" : window.location.origin + "/";
 
         // Load Footer
         loadContent('footer.html', 'foot');
