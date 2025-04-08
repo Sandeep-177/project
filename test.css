@@ -1,0 +1,62 @@
+@media screen and (max-width:639px){
+    /* head Section */
+    .smallScreenHeader{
+        display:flex;
+        flex-direction:column;
+}
+   
+    #pyellowPrnt{
+        position:absolute;
+        top: 75%;
+        left:10%;
+    }
+    #pyellow{
+        font-size: 32px;
+        /* margin:0; */
+        padding:5px;
+        width: 220px;
+        height: 80px;
+    }
+    #pyellow2{
+        font-size: 40px;
+        /* margin:0; */
+        padding:5px;
+        width: 220px;
+        height: 80px;
+        transform: translateY(40%)
+    }
+    #heroc{
+        width:100%;
+        margin:0;
+        padding:30px;
+        display: grid;
+    }
+   
+    #heroc .lernm{
+        justify-self:end;
+        align-self:end;
+    }
+
+    #scard{
+        justify-content:center;
+        flex-wrap:wrap;
+    }
+
+    /* who we are section */
+    #guy{
+        padding:0;
+        text-align:justify;
+    }
+    #prntn1{
+        display:flex;
+        flex-direction:column;
+    }
+    #prntn1 .new1{
+        /* color:red; */
+        /* margin:0;
+        padding:0; */
+        flex-wrap:wrap;
+        width:100%;
+    }
+    
+}

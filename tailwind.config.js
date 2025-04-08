@@ -4,6 +4,7 @@ module.exports = {
     "./*.html", // All HTML files in the root directory
     "./**/*.html", // All HTML files in subdirectories
     "./**/*.{js,jsx,ts,tsx}", // All JavaScript and TypeScript files in all subdirectories
+    "./**/*.php",
     "!./node_modules/**/*", // Exclude node_modules
   ],
   theme: {
