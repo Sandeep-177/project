@@ -27,6 +27,45 @@
         loadContent('/project/customer_html/footer.html', 'foot');
 
 
+setTimeout(() => {
+        let linkImg2=document.getElementById("barImg");
+        let linkImg=document.getElementById("barImg2");
+        let lnkCls= document.getElementById("abAfterblink");
+        // let linkImg3=document.getElementById("headerNav");
+        function imgtest() {
+            console.log("bar icon clicked");
+            console.log(lnkCls[0]);
+            if (lnkCls.classList.contains("active")) {
+                // lnkCls.forEach(element => {
+                //     element.classList.remove("active");
+                // });
+            //     Array.from(lnkCls).forEach(element => {
+            //    element.classList.remove("active");
+            //     console.log('active class removed');
+            //   });
+            lnkCls.classList.remove("active");
+              linkImg.innerHTML="<img src='/project/icon/bars-solid.svg' alt='no bar image'>";
+                
+            } else {
+                // lnkCls.forEach(element => {
+                //     element.classList.add("active");
+                // });
+            //     Array.from(lnkCls).forEach(element => {
+            //    element.classList.add("active");
+            //     console.log('active class added');
+            //   });
+            lnkCls.classList.add("active");
+              linkImg.innerHTML="<img src='/project/icon/xmark-solid.svg' alt='no xmark image'>"; 
+            }
+            // Array.from(lnkCls).forEach(element => {
+            //     element.classList.toggle("active");
+            //     console.log('change in class');
+            //   });
+              console.log("exit img test function");
+              
+        }
+        linkImg2.addEventListener('click',imgtest);
+    }, 2000);
 
         
         
