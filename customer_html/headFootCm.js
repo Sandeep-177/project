@@ -27,14 +27,19 @@
         loadContent('/project/customer_html/footer.html', 'foot');
 
 
+        
+// setTimeout(() => {
+//     lnkCls.classList.remove("noTransition");
+// }, 100);
+
 setTimeout(() => {
-        let linkImg2=document.getElementById("barImg");
-        let linkImg=document.getElementById("barImg2");
-        let lnkCls= document.getElementById("abAfterblink");
+    let linkImg2=document.getElementById("barImg");
+    let linkImg=document.getElementById("barImg2");
+    let lnkCls= document.getElementById("abAfterblink");
         // let linkImg3=document.getElementById("headerNav");
         function imgtest() {
             console.log("bar icon clicked");
-            console.log(lnkCls[0]);
+            console.log(lnkCls);
             if (lnkCls.classList.contains("active")) {
                 // lnkCls.forEach(element => {
                 //     element.classList.remove("active");
@@ -65,7 +70,7 @@ setTimeout(() => {
               
         }
         linkImg2.addEventListener('click',imgtest);
-    }, 2000);
+    }, 3000);
 
         
         
