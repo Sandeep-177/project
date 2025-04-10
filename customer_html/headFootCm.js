@@ -50,6 +50,7 @@ setTimeout(() => {
             //   });
             lnkCls.classList.remove("active");
               linkImg.innerHTML="<img src='/project/icon/bars-solid.svg' alt='no bar image'>";
+              document.body.style.overflowX = "hidden";
                 
             } else {
                 // lnkCls.forEach(element => {
@@ -60,7 +61,8 @@ setTimeout(() => {
             //     console.log('active class added');
             //   });
             lnkCls.classList.add("active");
-              linkImg.innerHTML="<img src='/project/icon/xmark-solid.svg' alt='no xmark image'>"; 
+              linkImg.innerHTML="<img src='/project/icon/xmark-solid.svg' alt='no xmark image'>";
+              document.body.style.overflowX = "hidden"; 
             }
             // Array.from(lnkCls).forEach(element => {
             //     element.classList.toggle("active");
