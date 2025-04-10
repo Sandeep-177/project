@@ -59,10 +59,7 @@ header nav ul li a {
     font-size: 20px;
     font-weight: 500;
 }
-#barImg img{
-    width:30px;
-    height:30px;
-}
+
 
 /* Hero Section */
 .hero {
@@ -340,14 +337,27 @@ footer ul img{
     /* .noTransition{
         transition:none;
     } */
+    #barImg{
+        width:30px;
+        height:30px;
+    }
+    #barImg img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
     .smallScreenHeader{
         display:flex;
         /* width:100%; */
     }
-    .afterImg{
+  
+    #barImg{
         /* display:flex; */
         position:absolute;
+        cursor: pointer;
         top:25px;
+        right:10px;
+        z-index:20;
     }
     #abAfterblink{
         border-radius:10px 0 0 10px;
@@ -390,9 +400,7 @@ footer ul img{
         display:flex;
         flex-direction:column;
     }
-    #barImg {
-        cursor: pointer;
-      }
+    
     #pyellow{
         font-size: 32px;
         /* margin:0; */
@@ -442,7 +450,7 @@ footer ul img{
     
 }
 @media screen and (min-width:640px){
- #headerNav #barImg{
+  #barImg{
     display:none;
  }
 }
