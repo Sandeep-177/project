@@ -1,7 +1,8 @@
 #contact1{
     display: flex;
     background-color: black;
-    width: 100%;
+    /* width: 100%; */
+    width:100vw;
     padding: 20px;
     position: relative;
 }
@@ -26,7 +27,9 @@
     font-size: 15px;
 }
 #infield{
-    width: 800px;
+    /* position:relative; */
+    /* width: 800px; */
+    width:60%;
     height: fit-content;
     background-color: white;
     margin: 10px 10px 10px 30%;
@@ -136,3 +139,25 @@ background-color: #e4d54e;
     background-color:#f0f181;
 }
 
+@media screen and (max-width:639px){
+    #infield{
+        
+        /* top:200px; */
+        margin:0 auto;
+        width:90%;
+        height:fit-content;
+    }
+    #yellowb{
+        /* display:none; */
+        top:330px;
+        left:10px;
+        border:2px solid black;
+    }
+    #sec2div{
+        margin-top:80px;
+        display:grid;
+        grid-template-columns:auto;
+        /* display:flex;
+        flex-direction:column; */
+    }
+}

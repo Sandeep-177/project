@@ -53,3 +53,32 @@ select{
     width: 500px;
     height: fit-content;
 }
+
+@media screen and (max-width:639px){
+    #order1{
+        width:100%;
+        
+    }
+    #para{
+        top:80px;
+        background-color:white;
+        display:none;
+        position:absolute;
+        z-index:5;
+        width:90%;
+        height:fit-content;
+        text-align:justify;
+        left: 50%;
+    transform: translateX(-50%);
+        
+    }
+    #loca{
+        width:100%;
+        position:relative;
+    }
+}
+@media screen and (min-width:640px){
+    #orderHidButn{
+        display:none;
+    }
+}

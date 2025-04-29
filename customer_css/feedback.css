@@ -1,12 +1,16 @@
 #priv {
     padding: 50px;
-
+    
 }
 
 .as {
+    margin:0 0 0 5%;
+    border:2px solid black;
     display: flex;
+    width:fit-content;
     flex-direction: column;
     gap: 20px;
+    padding:2rem;
 }
 
 .as h1 {
@@ -14,14 +18,13 @@
     color: #007BFF;
 }
 
-.as h2,
-h4 {
+.as h2,h4 {
     color: blue;
 }
 
 .as input,
 textarea {
-    width: 50%;
+    width: 100%;
     padding: 5px;
     text-align: justify;
 }

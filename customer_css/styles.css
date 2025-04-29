@@ -12,7 +12,7 @@ html, body{
     margin: 0;
     padding: 0;
     /* box-sizing: border-box; */
-    outline: 1px solid red;
+    /* outline: 1px solid red; */
     box-sizing:border-box;
 }
 /* *{
@@ -319,7 +319,10 @@ footer ul img{
         align-items: center;
         flex-wrap: wrap;
     }
-.tryi p,button{
+/* .tryi p,button{
+    visibility: hidden;
+} */
+.tryi p{
     visibility: hidden;
 }
 .card:hover{
@@ -328,7 +331,10 @@ footer ul img{
     .tryi{
         bottom: 0;
     }
-    .tryi p,button{
+    /* .tryi p,button{
+        visibility: visible;
+    } */
+    .tryi p{
         visibility: visible;
     }
 }
