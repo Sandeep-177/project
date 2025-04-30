@@ -167,8 +167,9 @@
         order:0;
     }
 }
+/* @media (max-width: 768px) { ... } */
 /* @media screen and (max-width:639px) */
-@media screen and (max-width:650px){
+@media screen and (max-width:768px){
     #parentph{
         margin:0;
         padding:0;
