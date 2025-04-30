@@ -149,12 +149,13 @@ background-color: #e4d54e;
     }
     #yellowb{
         /* display:none; */
-        top:330px;
+        top:380px;
+        /* buttom:100px; */
         left:10px;
         border:2px solid black;
     }
     #sec2div{
-        margin-top:80px;
+        margin-top:130px;
         display:grid;
         grid-template-columns:auto;
         /* display:flex;
