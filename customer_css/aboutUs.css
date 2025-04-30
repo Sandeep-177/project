@@ -136,11 +136,11 @@
     grid-column: 1/2;
     transform: rotate(3deg);
 }
-@media screen and (min-width:650px) {
+/* @media screen and (min-width:650px) {
     .ard{
         width: 250px;
     }
-}
+} */
 
 @media screen and (min-width:1090px){
 #abUsBgImg{
@@ -167,7 +167,8 @@
         order:0;
     }
 }
-@media screen and (max-width:639px){
+/* @media screen and (max-width:639px) */
+@media screen and (max-width:650px){
     #parentph{
         margin:0;
         padding:0;
@@ -181,7 +182,7 @@
         margin:0;
         padding:0;
     }
-    /* .ard{
+    .ard{
         width: 250px;
-    } */
+    }
 }
