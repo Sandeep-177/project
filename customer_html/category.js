@@ -14,7 +14,7 @@ ckd.forEach(link => {
 
         // if (elemntIndex >= 0 && elemntIndex < categoryPages.length) {
             let catUrl=window.location.href;
-            let baseUrls=catUrl.includes("index.html")?"/project/subCategory/":"../subCategory/";
+            let baseUrls=(catUrl.includes("/project/index.html") || catUrl.includes("/project/"))?"/project/subCategory/":"../subCategory/";
 
 
         if (link ) {
