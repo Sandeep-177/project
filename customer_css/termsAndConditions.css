@@ -1,5 +1,6 @@
 #term{
-    margin: 50px 100px;
+    /* margin: 50px 100px; */
+    padding:50px;
 }
 #term h1{
     margin-bottom: 10px;
@@ -12,4 +13,16 @@ h2{
 #term p{
     line-height: 1.6;
     text-align: justify;
+    text-indent:80px;
+}
+@media screen and (max-width:639px){
+    #term{
+        padding:15px;
+    }
+    h2{
+        margin: 15px 0 5px;
+    }
+    #term p{
+        text-indent:80px;
+    }
 }

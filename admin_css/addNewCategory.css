@@ -37,6 +37,10 @@
 }
 
 /* table database div */
-table tr th{
+/* table tr th{
     padding: 10px;
-}
+} */
+ table p{
+    width:100%;
+    overflow-x:auto;
+ }

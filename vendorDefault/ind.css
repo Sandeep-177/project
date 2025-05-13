@@ -1,13 +1,10 @@
 /* General Styles */
+*{
+    /* outline: 1px solid red; */
+}
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
     background-color: #f4f4f4;
-}
-
-h1, h2, h3, p {
-    margin: 0 0 15px;
 }
 
 a {
@@ -48,39 +45,64 @@ header nav ul li a {
     color: #fff;
     font-size: 16px;
 }
-button{
-    width: 100px;
+ .button{
+    width: fit-content;
     height: 30px;
     background-color: #007BFF;
+    margin-top:15px;
 }
 
 /* Hero Section */
 .hero {
     background-color: #007BFF;
     color: #fff;
-    padding: 100px 20px;
-    text-align: center;
+    padding: 50px 20px;
+    height:fit-content;
 }
 
-.hero .cta-btn {
+.cta-bbtn{
     background-color: #f8a900;
     padding: 15px 30px;
     border-radius: 5px;
     font-size: 18px;
-    margin-top: 20px;
+    display: inline-block;
 }
+.hero-content h2{
+    /* margin:10px; */
+    font-size: 2em;
+}
+.hero-content p{
+    font-size: 1.5em;
+}
+
 /* account creation step div */
+p{
+    line-height:1.6;
+}
+.txt{
+    padding:0 10px;
+}
 #acdivP{
     background-color: palevioletred;
+    box-sizing:border-box;
+    padding:20px;
 }
 #acdivP h2{
     text-align: center;
-    padding: 10px;
+    box-sizing:border-box;
+    /* margin:20px; */
+    padding:20px 0;
+    font-size:2rem;
+    /* padding: 10px; */
 }
 #acdiv{
+    /* margin: 1 rem; */
+    /* padding:0; */
     display: grid;
     grid-template-columns: auto auto;
-    grid-template-rows: 300px 300px 300px 300px 300px;
+    /* grid-template-rows: 300px 300px 300px 300px 300px; */
+    grid-template-rows: auto auto auto auto auto;
+    /* grid-gap: 10px; */
 }
 .im img{
     height: 200px;
@@ -98,10 +120,26 @@ button{
 .fstrt{
     justify-content: flex-start;
 }
+
+/* Receive Payment section */
+#butD{
+    margin:0 40px 40px;
+}
+/* #butD h2{
+    margin: 30px 0 5px;
+}
+#butD h3{
+    margin: 10px 0 5px;
+}
+#butD ul {
+    margin: 0 30px;
+    line-height:1.6;
+} */
 /* Section Styles */
-.section {
-    padding: 40px 20px;
-    text-align: center;
+.butnSection {
+    display: flex;
+    flex-direction:column;
+    align-items:center;
 }
 
 
@@ -112,4 +150,16 @@ footer {
     color: #fff;
     text-align: center;
     padding: 20px 0;
+}
+@media screen and (max-width:639px){
+    .im img{
+        height: 150px;
+        width: 150px;
+        border-radius: 50%;
+    }
+}
+
+.parentSection{
+    padding: 20px 20px;
+    height:fit-content;
 }

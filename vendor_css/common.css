@@ -17,36 +17,47 @@ body {
 }
 
 /* Header */
-header{
+/* header{
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     background: #f5f1f1;
     padding: 1rem 2rem;
-}
+} */
 .logo {
     font-size: 2.5rem;
     font-weight: bold;
 }
 div ul{
-    display: flex;
+    /* display: flex;
     list-style: none;
     flex-wrap: wrap;
     justify-content: flex-end;
-    gap: 20px;
+    gap: 20px; */
 }
 div ul li{
     margin-right: 20px;
 }
-a{
+h2{
+    margin: 30px 0 5px;
+}
+h3{
+    margin: 10px 0 5px;
+}
+ul {
+    margin: 0 30px;
+    line-height:1.6;
+}
+/* a{
+    margin-top:20px;
     text-decoration: none;
     color: black;
     font-size: 20px;
     font-weight: 500;
-}
+} */
 .button{
-    margin-right: 50px;
+    margin-right: 10px;
     background: #007BFF;
     color: #fff;
     padding: 0.5rem 1rem;
@@ -66,7 +77,7 @@ a{
 }
 
 /* who we are*/
-#second{
+/* #second{
     padding: 2rem;
     display: flex;
     justify-content: space-evenly;
@@ -88,10 +99,10 @@ a{
 .contactUs ul li a img{
     height: 1.5rem;
     
-}
+} */
 
 /* Footer */
-footer {
+/* footer {
     margin-top: auto;
     background: #007BFF;
     color: #fff;
@@ -111,4 +122,4 @@ footer ul {
 footer ul img{
     height: 25px;
     width: 25px;
-}
+} */

@@ -15,7 +15,8 @@
 
 #category .category-cards {
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    /* grid-template-columns: auto auto auto auto; */
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
 }
 .catCard {
     color: bisque;

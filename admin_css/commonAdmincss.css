@@ -3,6 +3,7 @@ html{
 }
 
 *{
+    /* outline: 1px solid red; */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -56,8 +57,8 @@ header {
 } */
 .nav-bar nav ul{
     /* margin: auto; */
-    margin-right: 100px;
-    justify-content: right;
+    /* margin-right: 100px; */
+    justify-content: center;
     align-items: center;
     display: flex;
     /* flex-wrap: wrap; */
@@ -69,6 +70,44 @@ header nav ul li a {
     color: #fff;
     text-decoration: none;
 }
+
+/* table css */
+.parent{
+    margin:40px;
+}
+.tble{
+    /* margin: 20px 85px; */
+    /* margin: 0 auto; */
+    /* background-color: pink; */
+    width:100%;
+    overflow-x:auto;
+}
+/* .scroll-container {
+    min-width: 800px;
+  }
+  
+  .scroll-heading {
+    background-color: rgb(227, 233, 227);
+    padding: 20px;
+    margin: 0;
+  } */
+table{
+    width: 100%;
+    /* text-align: left; */
+    table-layout: auto;
+    border-collapse:collapse;
+    min-width: 800px; 
+}
+th,td{
+    white-space:nowrap; 
+    /* overflow:hidden; 
+    text-overflow:ellipsis; */
+}
+@media screen and (max-width:639px){
+    .parent{
+        margin: 20px 20px;
+    }
+ }
 
 
 /* Footer */

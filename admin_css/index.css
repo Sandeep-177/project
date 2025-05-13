@@ -2,17 +2,22 @@
 h3,.pDiv{
     margin: 20px 85px;
 }
+.table{
+    width:100%;
+    /* margin: 20px 85px; */
+    /* margin:0 auto; */
+}
 .firstP{
-    display: flex;
-    align-items: center;
+    /* display: flex;
+    align-items: center; */
     padding: 20px;
     margin: 20px 85px;
 }
 
 /* four boxes */
 .fourDiv{
-    margin: 10px;
-    display: flex;
+    display:grid;
+    grid-template-columns: auto auto auto auto;
     justify-content: space-evenly;
 }
 
@@ -20,11 +25,23 @@ h3,.pDiv{
     display: flex;
     justify-content: center;
     align-items: flex-end;
+    
     border-radius: 10px;
     border: 2px solid black;
     height: 200px;
     width: 300px;
+    /* width:fit-content; */
     padding: 30px;
+}
+@media screen and (max-width:639px){
+    .fourDiv{
+    display:grid;
+    grid-template-columns: auto auto;
+    gap:2rem;
+    }
+    .fourChild{
+        width:150px;
+    }
 }
 
 
@@ -42,14 +59,11 @@ h3,.pDiv{
 }
 
 /* table */
-.tble{
-    margin: 20px 85px;
-    /* background-color: pink; */
-}
-table{
-    width: 100%;
-    text-align: left;
-}
-th,td{
+
+
+/* th,td{
     padding: 10px 0 10px 10px;
-}
+} */
+/* #adminIndexTable{
+
+} */
