@@ -12,8 +12,13 @@ ckd.forEach(link => {
         event.preventDefault();
         let elemntIndex = parseInt(this.getAttribute('data-new'), 10);
 
-        if (elemntIndex >= 0 && elemntIndex < categoryPages.length) {
-            let baseUrls='../subCategory/';
+        // if (elemntIndex >= 0 && elemntIndex < categoryPages.length) {
+            let catUrl=window.location.href;
+            let baseUrls=catUrl.includes("index.html")?"/project/subCategory/":"../subCategory/";
+
+
+        if (link ) {
+            // let baseUrls='../subCategory/';
             let targetUrl = baseUrls + categoryPages[elemntIndex];
             console.log("Navigating to:", targetUrl);
             window.location.href = targetUrl;
